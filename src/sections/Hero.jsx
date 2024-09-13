@@ -32,9 +32,9 @@ const Hero = () => {
                             position={sizes.deskPosition}
                             rotation={[0, -Math.PI, 0]}
                         />
-                        <group>
-                            <Target posiiton={sizes.targetPosition} />
-                        </group>
+                        {/*<group>*/}
+                        {/*    <Target posiiton={sizes.targetPosition} />*/}
+                        {/*</group>*/}
                         <ambientLight intensity={1} />
                         <directionalLight position={[10, 10, 10]} intensity={0.5}/>
                     </Suspense>
