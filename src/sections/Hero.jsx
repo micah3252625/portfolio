@@ -11,6 +11,7 @@ import ReactLogo from "../components/ReactLogo.jsx";
 import Cube from "../components/Cube.jsx";
 import Rings from "../components/Rings.jsx";
 import HeroCamera from "../components/HeroCamera.jsx";
+import Button from "../components/Button.jsx";
 
 const Hero = () => {
     // Use media queries to determine screen size
@@ -28,11 +29,14 @@ const Hero = () => {
                 <p className="hero_tag text-gray_gradient">Building Product & Brands</p>
             </div>
             <div className="w-full h-full absolute inset-0">
+
+                {/*Space for 3D scenes*/}
                 <Canvas className="w-full h-full">
                     <Suspense fallback={<CanvasLoader/>}>
+                        {/*Camera for 3D model perspective*/}
                         <PerspectiveCamera makeDefault position={[0, 0, 30]}/>
-
                         <HeroCamera isMobile={isMobile}>
+                            {/*Render the 3D model */}
                             <HackerRoom
                                 scale={sizes.deskScale}
                                 position={sizes.deskPosition}
@@ -40,16 +44,26 @@ const Hero = () => {
                             />
                         </HeroCamera>
 
+                        {/* 3D floating Elements with certain positions */}
                         <group>
                             <Target position={sizes.targetPosition}/>
                             <ReactLogo position={sizes.reactLogoPosition}/>
                             <Rings position={sizes.ringPosition} />
                             <Cube position={sizes.cubePosition} />
                         </group>
+
+                        {/*Lighting for the 3D models*/}
                         <ambientLight intensity={1}/>
                         <directionalLight position={[10, 10, 10]} intensity={0.5}/>
                     </Suspense>
                 </Canvas>
+
+            </div>
+
+            <div className="absolute bottom-7 left-0 right-0 w-full z-10 c-space">
+                <a href="#contact" className="w-fit">
+                    <Button name="Let's work together" isBeam containerClass="sm:w-fit w-full sm:min-w-96"/>
+                </a>
             </div>
         </section>
     )

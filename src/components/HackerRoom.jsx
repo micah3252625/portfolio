@@ -4,11 +4,14 @@ Command: npx gltfjsx@6.5.0 hacker-room-new.glb -T
 Files: hacker-room-new.glb [34.62MB] > /Users/hsuwinlat/Desktop/jsm pj/threejscc-portfolio/public/models/hacker-room-new-transformed.glb [2.56MB] (93%)
 */
 
+// library to make the model into a react component
 import {useGLTF, useTexture} from '@react-three/drei';
 
+// Importing and Using of SketchFab for 3D models
 const HackerRoom = (props) => {
     const {nodes, materials} = useGLTF('/models/hacker-room.glb');
 
+    // Used images as textures to the 3D models
     const monitorTexture = useTexture('textures/desk/monitor.png');
     const screenTexture = useTexture('textures/desk/screen.png');
 
