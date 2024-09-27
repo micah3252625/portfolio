@@ -1,8 +1,7 @@
-// eslint-disable-next-line no-unused-vars
-import React, {useRef} from 'react'
-import {useGLTF} from "@react-three/drei";
-import gsap from "gsap";
-import { useGSAP } from "@gsap/react";
+import { useGLTF } from '@react-three/drei';
+import { useRef } from 'react';
+import { useGSAP } from '@gsap/react';
+import gsap from 'gsap';
 
 const Target = (props) => {
     const targetRef = useRef();
@@ -18,10 +17,12 @@ const Target = (props) => {
             yoyo: true,
         });
     });
+
     return (
-       <mesh {...props} ref={targetRef} rotation={[0, Math.PI / 5, 0]}>
-           <primitive object={scene}/>
-       </mesh>
-    )
-}
-export default Target
+        <mesh {...props} ref={targetRef} rotation={[0, Math.PI / 5, 0]} scale={1.5}>
+            <primitive object={scene} />
+        </mesh>
+    );
+};
+
+export default Target;
