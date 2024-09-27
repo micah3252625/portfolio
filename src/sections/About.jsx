@@ -63,28 +63,31 @@ const About = () => {
                     <div className="grid-container">
                         <img src="/assets/grid1.png" alt="grid-1" className="w-full sm:h-[276px] h-fit object-contain"/>
                         <div>
-                            {/* eslint-disable-next-line react/no-unescaped-entities */}
                             <p className="grid-headtext">Hi, I'm Micah</p>
                             <p className="grid-subtext">
-                                Experienced System Developer with over 2 years in building and maintaining web
-                                applications
-                                and university systems. Proficient in backend frameworks like Laravel and Django, with
-                                skills in C++, PHP, Python, Java, and web technologies (HTML, CSS, JavaScript). Focused
-                                on backend development, but actively expanding frontend expertise through ongoing
-                                portfolio projects.
+                                I'm a System Developer with over 2 years of experience building web applications and
+                                university systems. My primary focus is backend development, but I'm continually
+                                enhancing my frontend skills through personal projects and collaborations.
                             </p>
                         </div>
                     </div>
                 </div>
+
                 <div className="col-span-1 xl:row-span-3">
                     <div className="grid-container">
                         <img src="/assets/grid2.png" alt="grid-2" className="w-full sm:h-[276px] h-fit object-contain"/>
                         <div>
                             <p className="grid-headtext">Tech Stack</p>
-                            <p className="grid-subtext">I specialize</p>
+                            <ul className="grid-subtext" style={{listStyleType: "disc", paddingLeft: "20px"}}>
+                                <li>Backend development with PHP (Laravel, Django)</li>
+                                <li>Frontend development with Bootstrap, learning React and Next.js</li>
+                                <li>Proficient in C++, Python, Java</li>
+                                <li>Experienced with databases (MySQL, PostgreSQL)</li>
+                            </ul>
                         </div>
                     </div>
                 </div>
+
                 <div className="col-span-1 xl:row-span-4">
                     <div className="grid-container">
                         <div className="rounded-3xl w-full sm:h-[326px] h-fit flex justify-center items-center">
@@ -107,49 +110,49 @@ const About = () => {
                             />
                         </div>
                         <div>
-                            <p className="grid-headtext">I work remotely across time zones.</p>
+                            <p className="grid-headtext">Remote Collaboration</p>
                             <p className="grid-subtext">
-                                Based in the Philippines, I specialize in remote collaboration with clients and teams
-                                worldwide. With expertise in backend and full-stack development, I ensure efficient
-                                communication and successful project outcomes, regardless of time zone challenges. Reach
-                                out to discuss how I can help bring your projects to life.
+                                I work remotely from the Philippines, delivering backend and full-stack solutions
+                                globally. Let’s connect to discuss how I can help bring your projects to life!
                             </p>
-                            <Button name="Contact me" isBeam containerClass="w-full mt-10"></Button>
+                            <Button name="Let’s build something great together!" isBeam
+                                    containerClass="w-full mt-10"></Button>
                         </div>
-
-
                     </div>
                 </div>
+
                 <div className="xl:col-span-2 xl:row-span-3">
                     <div className="grid-container">
                         <img src="/assets/grid3.png" alt="grid-3" className="w-full sm:h-[266px] h-fit object-contain"/>
                         <div>
-                            <p className="grid-headtext">My passion for coding</p>
+                            <p className="grid-headtext">My Passion for Coding</p>
                             <p className="grid-subtext">
-                                {/* eslint-disable-next-line react/no-unescaped-entities */}
-                                Coding is more than just my profession—it's what drives me. I’m passionate about solving
-                                complex problems and creating meaningful solutions through code. Whether building
-                                full-stack systems or optimizing backend processes, I find fulfillment in every
-                                challenge I tackle.
+                                Coding is more than just a job—it’s my craft. I love solving complex problems and
+                                turning ideas into impactful solutions. Each project is a chance to learn, push
+                                boundaries, and create systems that make a real difference. For me, coding isn’t just
+                                about completing tasks; it’s about building value and striving for excellence.
                             </p>
                         </div>
                     </div>
                 </div>
+
                 <div className="xl:col-span-1 xl:row-span-2">
                     <div className="grid-container">
-                        <img src="/assets/grid4.png" alt="grid-4" className="w-full md:h-[126px] sm:h-[276px] h-fit object-cover sm:object-top"/>
+                        <img src="/assets/grid4.png" alt="grid-4"
+                             className="w-full md:h-[126px] sm:h-[276px] h-fit object-cover sm:object-top"/>
                         <div className="space-y-2">
-                            <p className="grid-subtext text-center">
-                                Contact Me
-                            </p>
+                            <p className="grid-subtext text-center">Get in Touch</p>
                             <p className="copy-container" onClick={handleCopy}>
                                 <img src={hasCopied ? 'assets/tick.svg' : 'assets/copy.svg'} alt="copy"/>
-                                <p className="l:text-2xl md:text-xl font-medium text-gray_gradient text-white">micahmustaham@gmail.com</p>
+                                <p className="l:text-2xl md:text-xl font-medium text-gray_gradient text-white">
+                                    micahmustaham@gmail.com
+                                </p>
                             </p>
                         </div>
                     </div>
                 </div>
             </div>
+
         </section>
     )
 }
