@@ -57,7 +57,7 @@ const About = () => {
 
     const zamboangaCity = {lat: 6.9214, lng: 122.0790, text: 'Zamboanga City, Philippines'};
     return (
-        <section className="c-space my-20">
+        <section className="c-space my-20" id="about">
             <div className="grid xl:grid-cols-3 xl:grid-rows-6 md:grid-cols-2 grid-cols-1 gap-5 h-full">
                 <div className="col-pan-1 xl:row-span-3">
                     <div className="grid-container">
@@ -115,8 +115,7 @@ const About = () => {
                                 I work remotely from the Philippines, delivering backend and full-stack solutions
                                 globally. Let’s connect to discuss how I can help bring your projects to life!
                             </p>
-                            <Button name="Let’s build something great together!" isBeam
-                                    containerClass="w-full mt-10"></Button>
+                            <a href="#contact"><Button name="Let’s build something great together!" isBeam containerClass="w-full mt-10"></Button></a>
                         </div>
                     </div>
                 </div>
