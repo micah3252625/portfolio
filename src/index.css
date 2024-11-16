@@ -8,10 +8,37 @@
   scroll-behavior: smooth;
 }
 
+
+
 body {
   background: #010103;
   font-family: 'General Sans', sans-serif;
 }
+
+.headline-1 { 
+  @apply max-w-max;
+  background: -webkit-linear-gradient(0deg, #fafafa, #a1a1aa);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.headline-1 { 
+  @apply text-5xl leading-tight font-semibold lg:text-[55px] lg:leading-[1.15] text-white-800;
+}
+
+.container {
+  @apply px-4 mx-auto lg:px-8 xl:max-w-6xl;
+}
+
+.img-box {
+  @apply bg-zinc-700 overflow-hidden;
+}
+
+.img-cover {
+  @apply w-full h-full object-cover;
+}
+
+
 
 @layer utilities {
   .c-space {

@@ -29,7 +29,7 @@ const Developer = ({ animationName = 'idle', ...props }) => {
 
 
     const { actions } = useAnimations(
-        [idleAnimation[0], saluteAnimation[0], clappingAnimation[0], victoryAnimation[0]],
+        [idleAnimation[0], saluteAnimation[0], clappingAnimation[0], victoryAnimation[0]], 
         group,
     );
 
