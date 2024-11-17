@@ -17,7 +17,6 @@ import Laptop from "../components/Laptop.jsx";
 import Rings from "../components/Rings.jsx";
 import Avatar from "../../public/assets/avatar.png";
 import { CvButton } from "../components/CvButton.jsx";
-import { Download } from "lucide-react"; // Import the download icon from lucide-react
 
 const Hero = () => {
   // Use media queries to determine screen size
@@ -38,8 +37,10 @@ const Hero = () => {
           </h2>
           <div className="flex items-center gap-3">
             <CvButton
-            label="Download CV"
-            icon="download" />
+              label="Download CV"
+              href="/resume/Mustaham_Resume.pdf" // Correct path to the file
+              target="_blank" // Optional: Opens the file in a new tab
+            />
           </div>
         </div>
         <div className="hidden lg:block">
